@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,21 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using OgromniyBober.NavHost;
-using OgromniyBober.Pages;
 
-namespace OgromniyBober
+namespace OgromniyBober.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Desks.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Desks : Page
     {
-        public MainWindow()
+        public Desks()
         {
             InitializeComponent();
-            App.mainWindow = this;
-            AppNav.Navigate(new PageComps("Авторизация", new AppAuthorazation()));
         }
     }
 }

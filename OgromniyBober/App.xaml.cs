@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OgromniyBober.Data;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,7 @@ namespace OgromniyBober
     /// </summary>
     public partial class App : Application
     {
+        public static OgromniyBoberDatabaseEntities db = new OgromniyBoberDatabaseEntities();
+        public static MainWindow mainWindow;
     }
 }
