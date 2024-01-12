@@ -48,7 +48,8 @@ namespace OgromniyBober.Pages
                 User user = App.db.User.Where(x => x.LOGIN == LoginBox.Text && x.PASSWORD == PassWordBox.Password).FirstOrDefault();
                 if (user != null)
                 {
-                    AppNav.Navigate(new PageComps("", new Desks()));
+                    App.UserID = App.db.User.Where(x => x.LOGIN == LoginBox.Text && x.PASSWORD == PassWordBox.Password).FirstOrDefault().ID;
+                    AppNav.Navigate(new PageComps("Заметки", new Desks()));
                     MessageBox.Show($"Вы успешно зашли, {user.LOGIN}");
                 }
                 else

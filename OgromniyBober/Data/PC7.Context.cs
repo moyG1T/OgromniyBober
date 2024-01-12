@@ -25,8 +25,8 @@ namespace OgromniyBober.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<DESKS> DESKS { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<DESKS> DESKS { get; set; }
     }
 }

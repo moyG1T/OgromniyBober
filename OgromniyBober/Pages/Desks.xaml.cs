@@ -23,6 +23,8 @@ namespace OgromniyBober.Pages
         public Desks()
         {
             InitializeComponent();
+
+            DeskListView.ItemsSource = App.db.DESKS.Where(x => x.USER_ID == App.UserID).ToList();
         }
     }
 }

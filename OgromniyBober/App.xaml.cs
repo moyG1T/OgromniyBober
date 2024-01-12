@@ -16,5 +16,7 @@ namespace OgromniyBober
     {
         public static OgromniyBoberDatabaseEntities db = new OgromniyBoberDatabaseEntities();
         public static MainWindow mainWindow;
+
+        public static int UserID;
     }
 }

@@ -5,10 +5,26 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:OgromniyBober.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="630" d:DesignWidth="960"
       Title="Desks">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+
+        <Rectangle Fill="#303030"></Rectangle>
+
+        <ListView x:Name="DeskListView" Grid.ColumnSpan="3" Grid.Row="1">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Width="600" DisplayMemberBinding="{Binding Path = DESK_DESC}">Содержание</GridViewColumn>
+                        <GridViewColumn Width="355" DisplayMemberBinding="{Binding Path = DATE}">Дата</GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Page>

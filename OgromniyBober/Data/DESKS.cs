@@ -18,6 +18,7 @@ namespace OgromniyBober.Data
         public string DESK_DESC { get; set; }
         public Nullable<System.DateTime> DATE { get; set; }
         public Nullable<int> USER_ID { get; set; }
+        public Nullable<bool> IS_FAV { get; set; }
     
         public virtual User User { get; set; }
     }
